@@ -1,0 +1,143 @@
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .input-group {
+            margin-bottom: 16px;
+        }
+        .input-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: #374151; /* Gray-700 */
+        }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db; /* Gray-300 */
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: #6366f1; /* Indigo-500 */
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+        }
+        .btn {
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn:active {
+            transform: translateY(1px);
+        }
+        .btn-primary {
+            background-color: #6366f1; /* Indigo-500 */
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #4f46e5; /* Indigo-600 */
+        }
+        .btn-danger {
+            background-color: #ef4444; /* Red-500 */
+            color: white;
+        }
+        .btn-danger:hover {
+            background-color: #dc2626; /* Red-600 */
+        }
+        .transaction-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb; /* Gray-200 */
+        }
+        .transaction-item:last-child {
+            border-bottom: none;
+        }
+        .transaction-details {
+            flex-grow: 1;
+        }
+        .transaction-category {
+            font-size: 0.8rem;
+            color: #6b7280; /* Gray-500 */
+            background-color: #e5e7eb; /* Gray-200 */
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 8px;
+            display: inline-block;
+        }
+        .amount-income {
+            color: #10b981; /* Emerald-500 */
+            font-weight: 600;
+        }
+        .amount-expense {
+            color: #ef4444; /* Red-500 */
+            font-weight: 600;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .summary-item {
+            background-color: #f9fafb; /* Gray-50 */
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .summary-item h3 {
+            font-size: 0.9rem;
+            color: #6b7280; /* Gray-500 */
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+        .summary-item p {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        #expenseChartContainer {
+            min-height: 300px; /* Ensure chart has some height */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .container {
+                padding: 10px;
+            }
+            .card {
+                padding: 16px;
+            }
+            .summary-grid {
+                grid-template-columns: 1fr; /* Stack summary items on small screens */
+            }
+             .transaction-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .transaction-item button {
+                margin-top: 8px;
+                width: 100%;
+            }
+        }
+    
